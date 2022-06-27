@@ -35,11 +35,14 @@ public class ReferenceFinder {
         String prefix = "<a class=\"market_listing_row_link\" href=\"";
         String sufix = "\" id=\"resultlink_0\">";
         String out = "";
+
         try{
             out = content.substring(content.indexOf(prefix)+prefix.length(),
                     content.indexOf(sufix));
         }catch (StringIndexOutOfBoundsException exception){
-            throw new Exception("Wrong name || outdated affix");
+            throw new Exception("\n\nWrong name || outdated affix " +
+                    "\n When you're certain that It's the second issue or a bug ,please report it here: " +
+                    "\n https://github.com/kajmeter/Steam-marketplace_data_api-java/issues \n");
         }
 
         return out;
@@ -63,11 +66,11 @@ public class ReferenceFinder {
 
         return content;
     }
-    
+
     public int getAppID(){
         return appID;
     }
-    
+
     public void setAppID(int appID) {
         this.appID = appID;
     }
