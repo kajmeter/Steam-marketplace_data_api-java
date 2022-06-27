@@ -16,6 +16,6 @@ public class main {
     static void print(String item_name) throws Exception {
         System.out.println("I'm finding first "+item_name+" listing link under "
                 +finder.getAppID()+" app id: \n"
-                +finder.find(item_name));
+                +finder.find(item_name)+"\n");
     }
 }
