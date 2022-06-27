@@ -4,7 +4,7 @@ public class main {
     static String second_item = "earbuds";
 
     public static void main(String[] args) throws Exception {
-        //when needed setting custom appID is a possibility
+        //when needed ,setting custom appID is a possibility
          finder = new ReferenceFinder(730);
          print(first_item);
 
