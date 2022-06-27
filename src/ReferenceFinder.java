@@ -63,7 +63,11 @@ public class ReferenceFinder {
 
         return content;
     }
-
+    
+    public int getAppID(){
+        return appID;
+    }
+    
     public void setAppID(int appID) {
         this.appID = appID;
     }
