@@ -21,8 +21,8 @@ public class ReferenceFinder {
         setAppID(appID);
     }
 
-    public String find(String name) throws Exception {
-        return class_data_fetch(get_website_data(prepareLink(name)));
+    public reference find(String name) throws Exception {
+        return new reference(appID,class_data_fetch(get_website_data(prepareLink(name))),name);
     }
 
     private String prepareLink(String name){
@@ -86,5 +86,27 @@ public class ReferenceFinder {
             case DOTA2 -> appID = 570; case RUST -> appID = 252490;
             case TF2 -> appID = 440; case PUBG -> appID = 578080;
         }
+    }
+}
+
+class reference{
+    private int appID;
+    private String link;
+    private String search_name;
+
+    public reference(int appID, String link, String search_name){
+        this.appID = appID; this.link = link; this.search_name = search_name;
+    }
+
+    public int getAppID() {
+        return appID;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public String getSearch_name() {
+        return search_name;
     }
 }
